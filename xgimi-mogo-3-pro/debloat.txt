@@ -1,6 +1,6 @@
 # XGIMI MoGo 3 Pro (modèle G0035, appareil "altai", MediaTek), Google TV / Android 14 (SDK 34).
 # Liste testée sur le build UKNV.260707.001.15802496 (source : examples/xgimi-mogo-3-pro de
-# github.com/Gathin23/cleanyourtv, licence MIT), adaptée aux mêmes choix que sur le Halo+ :
+# github.com/Gathin23/cleanyourtv, licence MIT), avec par défaut les mêmes choix que dans un retour Reddit sur un XGIMI Halo+ :
 # démo magasin, outils d'usine, télémétrie, préinstallations Google et écrans de veille désactivés ;
 # Chromecast, télécommande téléphone et mises à jour firmware CONSERVÉS.
 #

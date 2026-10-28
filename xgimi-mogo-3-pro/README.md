@@ -1,9 +1,9 @@
 # Nettoyer une XGIMI MoGo 3 Pro (Google TV 14)
 
-Même démarche que sur le Halo+, adaptée à la MoGo 3 Pro (modèle G0035, appareil `altai`).
+Guide pour la MoGo 3 Pro (modèle G0035, appareil `altai`), inspiré d'un retour Reddit sur un XGIMI Halo+.
 La liste vient de l'exemple testé sur un vrai appareil dans
 [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) (`examples/xgimi-mogo-3-pro`, MIT),
-avec les mêmes choix que sur le Halo+ : **Chromecast, télécommande téléphone et mises à jour firmware conservés**.
+avec par défaut les mêmes choix que dans ce retour : **Chromecast, télécommande téléphone et mises à jour firmware conservés** (modifiable, voir étape 2).
 
 **13 paquets désactivés, rien de désinstallé** : démo magasin, outils d'usine, télémétrie,
 préinstallations Google, écrans de veille, quelques applis XGIMI. Keystone, autofocus, HDMI,
@@ -48,7 +48,7 @@ adb shell settings put secure screensaver_components com.android.dreams.basic/.C
 Keystone auto, autofocus, HDMI 1 (via le menu Entrées), clé USB, télécommande (y compris les touches
 YouTube/Netflix/Prime), recopie d'écran MagiCast.
 
-## 5. Nouveau launcher (facultatif, comme sur le Halo+)
+## 5. Nouveau launcher (facultatif)
 
 Sur Google TV les pubs viennent du launcher lui-même (`com.google.android.apps.tv.launcherx`) :
 pour s'en débarrasser il faut un autre launcher. Le plus simple est de suivre le projet
@@ -61,7 +61,7 @@ et en gardant l'approbation manuelle de chaque commande. Particularités de ce m
   `"stock_home_redirect": "com.google.android.apps.tv.launcherx"`.
 - `com.xgimi.xrmservice` **réactive le launcher d'origine** à chaque touche XGIMI de la télécommande
   (bouton programmable, profil, power). Ne désactivez pas xrmservice ; ré-appliquez simplement la liste.
-- HDMI 1 fonctionne via `com.google.android.tv.inputplayer`, pas besoin d'`input_action` (contrairement au Halo+).
+- HDMI 1 fonctionne via `com.google.android.tv.inputplayer`, pas besoin d'`input_action`.
 - L'assistant de configuration (`setupwraith`) revendique HOME : décommentez-le dans la liste
   **uniquement après** avoir installé le nouveau launcher, et reconnectez le Wi-Fi s'il disparaît.
   Réactivez-le avant toute réinitialisation d'usine.
