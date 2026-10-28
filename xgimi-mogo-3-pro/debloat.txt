@@ -1,0 +1,61 @@
+# XGIMI MoGo 3 Pro (modèle G0035, appareil "altai", MediaTek), Google TV / Android 14 (SDK 34).
+# Liste testée sur le build UKNV.260707.001.15802496 (source : examples/xgimi-mogo-3-pro de
+# github.com/Gathin23/cleanyourtv, licence MIT), adaptée aux mêmes choix que sur le Halo+ :
+# démo magasin, outils d'usine, télémétrie, préinstallations Google et écrans de veille désactivés ;
+# Chromecast, télécommande téléphone et mises à jour firmware CONSERVÉS.
+#
+# Appliquer : TV_HOST=<ip du projecteur> ./disable.sh debloat.txt
+# Annuler   : TV_HOST=<ip du projecteur> ./restore.sh
+# Tout est DÉSACTIVÉ (pm disable-user), jamais désinstallé. Commentez une ligne pour la garder.
+#
+# NE JAMAIS DÉSACTIVER (matériel du projecteur, entrées, mirroring) — disable.sh refuse ces paquets :
+# com.xgimi.autokst                    # keystone automatique
+# com.xgimi.windowsystem               # service keystone / fenêtre
+# com.xgimi.tof                        # autofocus ToF
+# com.xgimi.misckey                    # touches télécommande, raccourcis focus/keystone
+# com.xgimi.uiconfiguration            # récepteur de touches global, gestion alimentation
+# com.xgimi.xrmservice                 # touches globales, adaptation image/son
+# com.xgimi.xgimiservice               # service système XGIMI
+# com.xgimi.autoinstall                # rôle peu clair : conservé
+# com.xgimi.overseas.xgimiatvbootwizard  # assistant de premier démarrage
+# com.mediatek.tvinput                 # service d'entrée HDMI
+# com.mediatek.tv.service              # service TV, touche Netflix
+# com.google.android.tv.inputplayer    # lecteur HDMI et sélecteur d'entrée
+# com.nbcast.wirelessscreen            # MagiCast, récepteur de recopie d'écran
+
+# Démo magasin, outils d'usine et de test
+fusion.android.tv.demo                 # démo RetailDisplay
+com.xgimi.atvwifiverify                # vérification Wi-Fi d'usine
+com.xgimi.minitvfactory                # menu usine, transfert de fichiers, burn-in
+
+# Télémétrie et retours
+com.xgimi.bugreportsender              # envoi de rapports de bug XGIMI
+com.google.android.feedback            # retours Google
+
+# Préinstallations Google
+com.google.android.videos              # Play Films
+com.google.android.play.games          # Play Jeux
+com.google.android.marvin.talkback     # TalkBack (accessibilité)
+
+# Écrans de veille (choisir ensuite com.android.dreams.basic/.Colors, voir README)
+com.google.android.apps.tv.dreamx      # Ambient / Backdrop Google TV
+com.xgimi.screensaver                  # XGIMI Atmosphere
+
+# Applis optionnelles (par choix)
+air.ITVMobilePlayer                    # ITVX (absent hors Royaume-Uni : ignoré)
+com.xgimi.gimiplayer                   # lecteur vidéo/photo local XGIMI
+com.xgimi.doubanfm                     # appli musique XGIMI, écran mode enceinte
+
+# --- CONSERVÉS par choix, décommentez si vous n'en voulez pas ---
+# com.google.android.apps.mediashell   # Chromecast intégré
+# com.google.android.tv.remote.service # télécommande depuis le téléphone (Google TV)
+# com.xgimi.ota.accessories            # mises à jour firmware télécommande / enceinte
+# com.google.android.katniss           # Assistant Google / recherche vocale
+# com.google.android.tv.assistant      # LED de l'assistant
+
+# --- Seulement APRÈS avoir installé un autre launcher (voir README, étape 5) ---
+# Sur Google TV 14, l'assistant de configuration revendique HOME (RecoveryActivity, priorité 1) :
+# sans le désactiver, le nouveau launcher ne reste pas. Vérifiez d'abord que le Wi-Fi ne lui
+# appartient pas (le réseau configuré au premier démarrage peut disparaître : il faudra le ressaisir).
+# Réactivez-le avant toute réinitialisation d'usine.
+# com.google.android.tungsten.setupwraith
