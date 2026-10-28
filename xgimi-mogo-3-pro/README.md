@@ -1,6 +1,6 @@
 # Nettoyer une XGIMI MoGo 3 Pro (Google TV 14)
 
-Guide pour la MoGo 3 Pro (modèle G0035, appareil `altai`), inspiré d'un retour Reddit sur un XGIMI Halo+.
+Guide pour la MoGo 3 Pro (modèle G0035, appareil `altai`, Google TV 14 ou Android TV 11), inspiré d'un retour Reddit sur un XGIMI Halo+.
 La liste vient de l'exemple testé sur un vrai appareil dans
 [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) (`examples/xgimi-mogo-3-pro`, MIT),
 avec par défaut les mêmes choix que dans ce retour : **Chromecast, télécommande téléphone et mises à jour firmware conservés** (modifiable, voir étape 2).

@@ -4,6 +4,9 @@
 # démo magasin, outils d'usine, télémétrie, préinstallations Google et écrans de veille désactivés ;
 # Chromecast, télécommande téléphone et mises à jour firmware CONSERVÉS.
 #
+# Aussi appliqué le 2026-10-28 sur une MoGo 3 Pro en Android TV 11 (SDK 30), build RTM8.240401.230.12487230 :
+# com.xgimi.screensaver et air.ITVMobilePlayer n'y existent pas ; tous les paquets protégés ci-dessous sont présents.
+#
 # Appliquer : TV_HOST=<ip du projecteur> ./disable.sh debloat.txt
 # Annuler   : TV_HOST=<ip du projecteur> ./restore.sh
 # Tout est DÉSACTIVÉ (pm disable-user), jamais désinstallé. Commentez une ligne pour la garder.
